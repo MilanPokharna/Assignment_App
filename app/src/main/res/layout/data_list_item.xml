@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_margin="8dp"
+    style="Widget.App.CardStyle"
+    android:elevation="8dp"
+    app:cardCornerRadius="8dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:padding="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/empImg"
+            android:padding="8dp"
+            app:layout_constraintWidth_percent="0.2"
+            android:src="@drawable/employee"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/txtUserId"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="UserId - "
+            android:padding="4dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@id/txtTitle"
+            app:layout_constraintStart_toEndOf="@id/empImg"
+            app:layout_constraintTop_toTopOf="@id/empImg" />
+
+        <TextView
+            android:id="@+id/txtId"
+            android:text="Id - "
+            android:padding="4dp"
+            app:layout_constraintStart_toEndOf="@id/empImg"
+            app:layout_constraintTop_toBottomOf="@id/txtUserId"
+            app:layout_constraintEnd_toEndOf="@id/txtTitle"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/txtTitle"
+            android:text="Title -     "
+            android:padding="4dp"
+            app:layout_constraintStart_toEndOf="@id/empImg"
+            app:layout_constraintTop_toBottomOf="@id/txtId"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/custUserId"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBaseline_toBaselineOf="@+id/txtUserId"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/txtUserId"
+            tools:text="hello" />
+
+        <TextView
+            android:id="@+id/custId"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBaseline_toBaselineOf="@+id/txtId"
+            app:layout_constraintTop_toBottomOf="@id/custUserId"
+            app:layout_constraintStart_toEndOf="@id/txtId"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="hello" />
+
+        <TextView
+            android:id="@+id/custTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBaseline_toBaselineOf="@+id/txtTitle"
+            app:layout_constraintTop_toBottomOf="@id/custUserId"
+            app:layout_constraintStart_toEndOf="@id/txtTitle"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="hello" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
